@@ -21,14 +21,16 @@ pub struct MyClient {
 impl MyClient {
     #[wasm_bindgen(constructor)]
     pub fn new() -> Self {
+        log("MyClient created.");
         Self {}
     }
 
     pub fn update(&mut self, _time: f32, _height: f32, _width: f32) -> Result<(), JsValue> {
+        //log("Update call.");
         Ok(())
     }
 
     pub fn render(&self) {
-
+        log("Render call.");
     }
 }
